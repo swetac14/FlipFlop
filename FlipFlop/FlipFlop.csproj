@@ -69,6 +69,16 @@
   <ItemGroup>
     <Content Include="FlipFlip.js" />
     <Content Include="FlipFlop.html" />
+    <Content Include="Images\pokemon1.gif" />
+    <Content Include="Images\pokemon2.gif" />
+    <Content Include="Images\pokemon3.gif" />
+    <Content Include="Images\pokemon4.gif" />
+    <Content Include="Images\pokemon5.gif" />
+    <Content Include="Images\pokemon6.gif" />
+    <Content Include="Images\pokemon7.gif" />
+    <Content Include="Images\pokemon8.gif" />
+    <Content Include="Images\pokemon9.gif" />
+    <Content Include="Images\pokemonBack.jpg" />
     <Content Include="Styles\Styles.css" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -84,9 +94,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
