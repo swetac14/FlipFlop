@@ -47,6 +47,59 @@ body {
     perspective: 500px;
 }
 
+.block {
+    position: relative;
+    cursor: auto;
+    height: 125px;
+    width: 125px;
+}
+
+.block-front {
+    background-color: black;
+    border-color: royalblue;
+    transform: rotateY(180deg);
+}
+
+
+.block-value {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 100ms ease-in-out;
+    transform: scale(.9);
+}
+
+.block-face {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    border-width: 1px;
+    border-style: solid;
+    overflow: hidden;
+    transition: transform 500ms ease-in-out;
+    backface-visibility: hidden;
+}
+
+.block.visible .block-back {
+    transform: rotateY(-180deg);
+}
+
+.block.visible .block-front {
+    transform: rotateY(0);
+}
+
+
+.block-back {
+    background-color: black;
+    border-color: royalblue;
+    transform: rotateY(0);
+}
+
+
 .overlay-text {
     top: 0;
     left: 0;
@@ -61,4 +114,53 @@ body {
     color: azure;
     font-family: 'Dancing Script', cursive;
     transition: background-color 500ms, font-size 500ms;
+}
+
+.overlay-text-small {
+    font-size: .3em;
+}
+
+.overlay-text.visible {
+    display: flex;
+    animation: overlay-grow 500ms forwards;
+}
+
+@keyframes dance {
+    0%, 100% {
+        transform: rotate(0)
+    }
+
+    25% {
+        transform: rotate(-30deg)
+    }
+
+    75% {
+        transform: rotate(30deg)
+    }
+}
+
+@keyframes overlay-grow {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 0;
+    }
+
+    to {
+        background-color: rgba(0, 0, 0, .8);
+        font-size: 10em;
+    }
+}
+
+
+
+
+.image {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 505px;
+    height: 490px;
+    transition: transform 500ms ease-in-out;
+    z-index: 1;
 }

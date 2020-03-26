@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Controller.js" />
     <Content Include="FlipFlip.js" />
     <Content Include="FlipFlop.html" />
     <Content Include="Images\pokemon1.gif" />
